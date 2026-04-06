@@ -15,7 +15,7 @@ N/A
 N/A
 
 # Question 1: Empirical Comparison
-N/A
+![alt text](runtime_graph.png)
 
 # Question 2: Recurrence Equation
 N/A
