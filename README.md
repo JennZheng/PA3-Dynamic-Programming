@@ -23,7 +23,7 @@ The main algorithm uses Python Standard Library (sys). External libraries like m
   xK vK
   A
   B
-  ```  
+  ```
   Output files will have a single integer on one line which is the max value of common subsequence of A and B. On the next line is one optimal common subsequence that achieves this value.  
     
     Output file Format:
