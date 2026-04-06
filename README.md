@@ -28,7 +28,7 @@ The main algorithm uses Python Standard Library (sys). External libraries like m
     
   Output file Format:
     ```
-    9
+    9  
     cb
     ```
 
