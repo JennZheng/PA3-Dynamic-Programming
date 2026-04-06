@@ -13,11 +13,6 @@ Run the program from the repository root using:
 
 python src/main.py data/example.in
 
-To verify the output matches the expected file:
-
-python src/main.py data/example.in > my_output.out
-diff my_output.out data/example.out
-
 # Assumptions/Dependencies
 The main algorithm uses Python Standard Library (sys). External libraries like matplotlib are only needed for the running the grapher to generate the graph in Question 1.  
   
