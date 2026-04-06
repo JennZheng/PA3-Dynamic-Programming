@@ -37,7 +37,15 @@ cb
 ![alt text](runtime_graph.png)
 
 # Question 2: Recurrence Equation
-N/A
+dp[i][j] = maximum total value of a common subsequence of A[:i] and B[:j].
+
+Base cases:
+dp[0][j] = 0
+dp[i][0] = 0
+
+Recurrence:
+if A[i-1] != B[j-1], then dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+if they match, then dp[i][j] = max(dp[i-1][j], dp[i][j-1], dp[i-1][j-1] + value[A[i-1]])
 
 # Question 3: Big-Oh
 Pseudocode: 
