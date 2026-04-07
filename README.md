@@ -39,27 +39,26 @@ cb
 ![alt text](runtime_graph.png)
 
 # Question 2: Recurrence Equation
-dp[i][j] = maximum total value of a common subsequence of A[:i] and B[:j].
-
-Base cases:
-dp[0][j] = 0
-dp[i][0] = 0
-
-Recurrence:
-if A[i-1] != B[j-1], then dp[i][j] = max(dp[i-1][j], dp[i][j-1])
-if they match, then dp[i][j] = max(dp[i-1][j], dp[i][j-1], dp[i-1][j-1] + value[A[i-1]])
-
+dp[i][j] = maximum total value of a common subsequence of A[:i] and B[:j].  
+  
+Base cases:  
+dp[0][j] = 0  
+dp[i][0] = 0  
+  
+Recurrence:  
+if A[i-1] != B[j-1], then dp[i][j] = max(dp[i-1][j], dp[i][j-1])  
+if they match, then dp[i][j] = max(dp[i-1][j], dp[i][j-1], dp[i-1][j-1] + value[A[i-1]])  
+  
 # Question 3: Big-Oh
-Pseudocode: 
-
-HVLCS(A, B, value):
-    let n = length(A), m = length(B)
-    create array dp[0..n][0..m], init all to 0
-    for i = 1 to n:
-        for j = 1 to m:
-            dp[i][j] = max(dp[i-1][j], dp[i][j-1])
-            if A[i-1] == B[j-1]:
-                dp[i][j] = max(dp[i][j], dp[i-1][j-1] + value[A[i-1]])
-    return dp[n][m]
-
+Pseudocode:  
+HVLCS(A, B, value):  
+    let n = length(A), m = length(B)  
+    create array dp[0..n][0..m], init all to 0  
+    for i = 1 to n:  
+        for j = 1 to m:  
+            dp[i][j] = max(dp[i-1][j], dp[i][j-1])  
+            if A[i-1] == B[j-1]:  
+                dp[i][j] = max(dp[i][j], dp[i-1][j-1] + value[A[i-1]])  
+    return dp[n][m]  
+  
 The time and space complexity of the algorithm would be O(nm).
