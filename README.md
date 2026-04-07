@@ -55,10 +55,10 @@ HVLCS(A, B, value):
     let n = length(A), m = length(B)  
     create array dp[0..n][0..m], init all to 0  
     for i = 1 to n:  
-        for j = 1 to m:  
-            dp[i][j] = max(dp[i-1][j], dp[i][j-1])  
-            if A[i-1] == B[j-1]:  
-                dp[i][j] = max(dp[i][j], dp[i-1][j-1] + value[A[i-1]])  
+      for j = 1 to m:  
+        dp[i][j] = max(dp[i-1][j], dp[i][j-1])  
+        if A[i-1] == B[j-1]:  
+          dp[i][j] = max(dp[i][j], dp[i-1][j-1] + value[A[i-1]])  
     return dp[n][m]  
   
 The time and space complexity of the algorithm would be O(nm).
